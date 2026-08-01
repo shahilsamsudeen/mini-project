@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: arial, sans-serif;
+    background-color: #f2f2f2;
+}
+header {
+    background: linear-gradient(90deg, #59A3E9, #9820F4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.lien-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.lien-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+.lien-header a:hover {
+    text-decoration: underline;
+}
+.lien-retour {
+    margin: 15px 20px;
+    color: #888;
+    text-decoration: none;
+    display: inline-block;
+}
+.lien-retour:hover {
+    color: #9820F4;
+}
+.LRCT{
+    text-align: center;
+    font-size: 50px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.bungee {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-size: 70px;
+  font-style: normal;
+  text-align: center;
+  color:#59a3e9;
+  margin-top: 20px;
+}
+
+
+.flex {
+    padding-top:50px ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image_crousty{
+    background-color: #fff8f0;
+    height: 600px;
+    width: 25%;
+    box-shadow: 0 0 4px;
+    border-radius: 15px;
+}
+
+.recette_crousty {
+    background-color: #fff8f0;
+    width: 50%;
+    box-shadow: 0 0 4px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+img  {
+  width: 80%;
+  height: 300px;
+  margin: 40px;
+}
+
+.recette_crousty {
+    padding: 25px;
+}
+
+.recette_crousty h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.recette_crousty ul,
+.recette_crousty ol {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.scroll{
+    height: 500px;
+    overflow: scroll;
+}
+
+
+
+footer {
+    background: linear-gradient(90deg, #59a3e9, #9820f4);
+    height: 80px;
+}
+
+footer p{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Betania Patmos", cursive;
+}

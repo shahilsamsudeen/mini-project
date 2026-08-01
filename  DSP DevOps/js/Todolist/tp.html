@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+   <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+        :root {
+            --bg: #f5f4f0;
+            --surface: #ffffff;
+            --border: #e2e0d9;
+            --text: #1a1916;
+            --text-muted: #888580;
+            --accent: #1a1916;
+            --accent-fg: #ffffff;
+            --radius: 10px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.05);
+        }
+ 
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 48px 20px 80px;
+        }
+ 
+        .container { max-width: 720px; margin: 0 auto; }
+ 
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+ 
+        h2 {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+ 
+        .form-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+ 
+        select, input[type="text"], input[type="date"] {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            padding: 9px 13px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            height: 38px;
+        }
+ 
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23888' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 30px;
+            cursor: pointer;
+        }
+ 
+        select:focus, input:focus {
+            border-color: var(--text);
+            box-shadow: 0 0 0 3px rgba(26,25,22,0.07);
+        }
+ 
+        input[type="text"] { flex: 1; min-width: 140px; }
+ 
+        button {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 9px 18px;
+            height: 38px;
+            background: var(--accent);
+            color: var(--accent-fg);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.15s, transform 0.1s;
+            white-space: nowrap;
+        }
+ 
+        button:hover { opacity: 0.85; }
+        button:active { transform: scale(0.97); }
+ 
+        #listeTaches button {
+            font-size: 0.78rem;
+            padding: 5px 13px;
+            height: auto;
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            margin-left: 8px;
+        }
+ 
+        #listeTaches button:hover { background: var(--bg); opacity: 1; }
+ 
+        #listeTaches, #listeTravailleurs, #listeDepartements {
+            font-size: 0.875rem;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+
+<body>
+   
+    <div class="container">
+ 
+        <div class="card">
+            <h2>Nouvelle tâche</h2>
+            <div class="form-row">
+                <input type="text" id="travailleur" placeholder="Nom">
+                <input type="text" id="descriptionTache" placeholder="Description" />
+                <input type="date" id="dateTache" />
+                <button id="AjouterTache">Ajouter</button>
+            </div>
+        </div>
+ 
+        <div class="card">
+            <h2>Tâches</h2>
+            <div id="listeTaches">—</div>
+        </div>
+ 
+        <div class="card">
+            <div class="form-row">
+                <input type="text" id="ajoutTravailleur" placeholder="Nom">
+                <input type="text" id="ajoutDepartement" placeholder="Departement" />
+                <button id="AjouterTravailleurs">Ajouter</button><br>
+            </div>
+            <br>
+            <h2>Travailleurs</h2>
+            <div id="listeTravailleurs"></div>
+        </div>
+ 
+        <div class="card">
+            <h2>Départements</h2>
+            <div id="listeDepartements"></div>
+        </div>
+
+        <div class="card">
+            <h2>Moyenne des Tâches</h2>
+            <div id="moyenne"></div>
+        </div>
+ 
+    </div>
+
+    <script src="tp.js"></script>
+</body>
+</html>

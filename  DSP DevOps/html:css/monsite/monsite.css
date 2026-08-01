@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+header {
+	background: linear-gradient(90deg, #59A3E9, #9820F4);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 20px;
+}
+.logo {
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.lien-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.lien-header a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 8px 12px;
+}
+.lien-header a:hover {
+	text-decoration: underline;
+}
+
+.titre {
+	padding: 60px 20px 40px;
+	text-align: center;
+}
+.titre p {
+	color: #888;
+	font-size: 15px;
+}
+
+.grille {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px 40px 80px;
+}
+
+
+.carte {
+	background-color: white;
+	border-radius: 15px;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	overflow: hidden;
+	transition: 0.2s;
+}
+.carte:hover {
+	box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+	transform: translateY(-5px);
+}
+h2 {
+	padding: 10px;
+}
+.carte-texte p {
+	padding: 0 10px 10px 10px;
+	color: #888;
+	font-size: 14px;
+}
+.carte-image-conteneur {
+    background-color: #fff8f0;
+    text-align: center;        
+    padding: 20px;
+}
+.carte-image {
+	width: 145px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+
+@media (max-width: 900px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .grille {
+    grid-template-columns: 1fr;
+  }
+}

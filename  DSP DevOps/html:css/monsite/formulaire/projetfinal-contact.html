@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>contactez-nous</title>
+	<link rel="stylesheet" href="projetfinal-contact.css">
+</head>
+
+<body>
+	
+	<header>
+		<a href="../index.html" class="logo">🍽️ On cuisine quoi ?</a>
+		<div class="lien-header">
+			<a href="projetfinal-contact.html">Contactez-nous</a>
+			<a href="../FAQ/FAQ.html">FAQ</a> 
+		</div>
+	</header>
+	
+	<a href="../index.html" class="lien-retour">⬅Revenir à mes recettes</a>
+	<div class="titre">
+		<h1>✉️ Contactez-nous</h1>
+		<p>Une question ou une suggestion ? Écrivez-nous !</p>
+	</div>
+
+	<div class="contenu">
+		<form action="formulaire.php" method="POST">	
+			<div class="champ">
+				<label for="nom">Votre nom</label>
+				<input type="text" id="nom" name="nom" required placeholder="Ex : Sami Ossif">
+			</div>
+			<div class="champ">
+				<label>Votre email</label>
+				<input type="email" name="email" placeholder="Ex : sami@email.com">
+			</div>
+			<div class="champ">
+				<label>Votre message</label>
+				<textarea name ="message" placeholder="Écrivez votre message ici..."></textarea>
+			</div>
+			<button type="submit">Envoyer le message →</button>
+		</form>
+	</div>
+</body>
+</html>
